@@ -48,14 +48,14 @@ def gen(js: String) = s"""<!DOCTYPE html>
 
 <script type="text/javascript">
 $$(function(){
-  var cm = CodeMirror.fromTextArea(document.getElementById("input_js"), {
+  const cm = CodeMirror.fromTextArea(document.getElementById("input_js"), {
     lineNumbers: true,
     mode: "javascript"
   });
 
-  var run = function(){
+  const run = function(){
     try{
-      var r = ScalajspackMain.convert(cm.getValue());
+      const r = ScalajspackMain.convert(cm.getValue());
       $$("#output_msgpack").text(r);
       $$("#error").text("");
     }catch(e){
