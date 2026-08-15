@@ -17,7 +17,7 @@ lazy val scalajspack = projectMatrix
   .defaultAxes()
   .settings(
     name := "scalajspack",
-    licenses := Seq("MIT License" -> url("https://opensource.org/licenses/mit-license")),
+    licenses := Seq("MIT License" -> uri("https://opensource.org/licenses/mit-license")),
     scalacOptions ++= Seq(
       "-deprecation",
       "-unchecked",
